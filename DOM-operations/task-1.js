@@ -1,3 +1,5 @@
+/* jshint esversion:6, node:true */
+
 /* 
 Create a function that takes an id or DOM element and an array of contents
 * if an id is provided, select the element
@@ -13,7 +15,7 @@ Create a function that takes an id or DOM element and an array of contents
     * In that case, the content of the element **must not be** changed   
 */
 
-function solve() {
+module.export = function solve() {
   return function (element, contents) {
     if (typeof (element) === 'string') {
       element = document.getElementById(element);
@@ -45,6 +47,4 @@ function solve() {
     element.appendChild(fragment);
     console.log(element);
   };
-}
-
-solve()('div', ['aaa', 'aaa', 'aaa']);
+};
