@@ -65,4 +65,4 @@ module.exports = function solve() {
 
     selector.addEventListener('click', clickEvent);
   };
-}
+};

@@ -1,0 +1,8 @@
+{
+  "name": "dom-and-jquery-tests-with-mocha",
+  "dependencies": {},
+  "globalDependencies": {
+    "handlebars": "registry:dt/handlebars#3.0.3+20160317120654",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008"
+  }
+}
