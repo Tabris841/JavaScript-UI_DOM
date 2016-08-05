@@ -1,14 +1,22 @@
-function solve(){
-    return function(){
-        $.fn.listview = function(data){
-            var $this = $(this),
-                templateSelector = '#' + $this.attr('data-template'),
-                templateHtml = $(templateSelector).html(),
-                template = handlebars.compile(templateHtml),
-                ind, len;
+/* jshint esversion:6, node:true */
 
-            for(ind = 0, len = data.length; ind < len; ind += 1) {
-                $this.append(template(data[ind]));
+function solve() {
+    return function () {
+        $.fn.listview = function (data) {
+            var element,
+                templateSourceID,
+                source,
+                template,
+                length = data.length,
+                item;
+
+            element = $(this);
+            templateSourceID = element.attr('data-template');
+            source = $('#' + templateSourceID).html();
+            template = handlebars.compile(source); // LOWER H ON HANDLEBARS !!!!!!!!!!!!!!!!!!!!!
+
+            for (item = 0; item < length; item += 1) {
+                element.append(template(data[item]));
             }
 
             return this;
